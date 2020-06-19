@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+header {
+  flex: 1 1 20%;
+
+  background-color: #4a5759;
+
+  padding: 2em;
+}
+main {
+  flex: 1 1 80%;
+  min-height: 100vh;
+  padding: 10%;
+
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  grid-gap: 2em;
+}
+.content div {
+  background-color: #fe5f55;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.content a:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(/images/schedule.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content a:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/muffin.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content a:nth-of-type(3) {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/baby.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  justify-items: center;
+  flex: 1 1 100%;
+  background-color: #4a5759;
+}
+
+/* mobile */
+@media (max-width: 414px) {
+    .content{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+    }
+    .content a:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/muffin.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content a:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/schedule.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content a:nth-of-type(3) {
+  grid-column: 1 ;
+  grid-row: 3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/baby.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
